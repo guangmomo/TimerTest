@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xlw.test.TimerTestActivity"
+    android:orientation="vertical">
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:text="AlarmManager"
+      android:onClick="alarmManager"/>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:text="Handler"
+      android:onClick="handler"/>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:text="Timer"
+      android:onClick="timer"/>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:text="Thread"
+      android:onClick="thread"/>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="30dp"
+      android:id="@+id/tv_test"
+      android:textSize="20sp"/>
+
+</LinearLayout>

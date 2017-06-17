@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xlw.test">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name="com.xlw.test.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.xlw.test.TimerTestActivity" />
+
+        <receiver
+            android:name="com.xlw.test.alarm.AlarmManagerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="xlw_alarm_manager" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.xlw.test.alarm.AlarmManagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="xlw_alarm_manager" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.xlw.test.alarm.AlarmManagerActivity"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="xlw_alarm_manager" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xlw.test.MainActivity" />
+        <activity
+            android:name="com.xlw.test.DataBaseImageActivity"
+            android:label="@string/title_activity_data_base_image"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.xlw.test.SplashActivity" />
+        <activity android:name="com.xlw.test.fragmenttest.staticfragment.StaticFragmentActivity" />
+        <activity android:name="com.xlw.test.fragmenttest.dynamicfragment.DynamicFragmentActivity"></activity>
+        <activity android:name="com.xlw.test.fragmenttest.fragmentbackstack.FragmentBackStackActivity" />
+        <activity android:name="com.xlw.test.fragmenttest.dialogfragment.DialogFragmentActivity" />
+        <activity android:name="com.xlw.test.fragmenttest.bp.difAc.Activity1" />
+        <activity android:name="com.xlw.test.fragmenttest.bp.difAc.Activity2" />
+        <activity android:name="com.xlw.test.fragmenttest.bp.samAc.SameActivity"></activity>
+        <activity android:name="com.xlw.test.fragmenttest.viewpager.ViewPagerActivity">
+
+        </activity>
+        <activity android:name="com.xlw.test.imagetest.BitmapActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

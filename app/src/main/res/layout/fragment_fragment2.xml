@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xlw.test.fragmenttest.bp.samAc.Fragment2">
+
+    <!-- TODO: Update blank fragment layout -->
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:id="@+id/et_fragment2"/>
+
+</FrameLayout>
