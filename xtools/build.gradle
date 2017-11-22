@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
 
 android {
     compileSdkVersion 25
@@ -22,6 +23,11 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
+
 }
 
 dependencies {
@@ -32,4 +38,15 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+}
+
+
+publish {
+    userOrg = 'xuliwen'//bintray.com用户名
+    groupId = 'com.xuliwen'//jcenter上的路径
+    artifactId = 'xtools'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'Android Toast Utils'//描述，不重要
+    repoName = 'xtools'
+    website = 'https://github.com/guangmomo/TimerTest'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
